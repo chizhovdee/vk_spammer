@@ -1,0 +1,25 @@
+
+<div class="header">Пользователи</div>
+
+<ul>
+  <% global.logins.forEach(function(login){ %>
+    <li>
+      <%= login[0] %>
+
+      <% if (login[0] == global.currentUser.user_id) { %>
+       - <span class="online">ONLINE</span>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>
+
+<div class="success_added">
+  <br />
+  Успешно добавлено - <strong><%= global.success_added %></strong>
+</div>
+
+
+<div class="captcha">
+  <br />
+  captcha - <strong><%= currentUser.captcha %></strong>
+</div>

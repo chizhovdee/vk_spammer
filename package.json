@@ -1,0 +1,13 @@
+{
+  "main": "main.html",
+  "name": "Спаммер друзей в Вконтакте",
+  "description": "Добавление новых друзей в Вконтакте",
+  "version": "0.1.0",
+  "window": {
+    "title": "Спаммер друзей в Вконтакте",
+    "toolbar": true,
+    "width": 780,
+    "height": 550,
+    "position": "center"
+  }
+}
