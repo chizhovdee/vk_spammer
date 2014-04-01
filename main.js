@@ -8,8 +8,9 @@ global._ = require('underscore');
 // login, password
 global.authorization_data = [
   //[chizhov.dee@gmail.com', 'chizhov777'],
-  ['79068914818', 'therapsida1'],
-  ['79226341411', 'therapsida2']
+  ['218027326', '79068914818', 'therapsida1'],
+  ['248635139', '79226341411', 'therapsida2'],
+  ['248980434', '79226315582', 'therapsida3']
 ];
 
 // группы в Вконтакте из которых мы будем выбирать участников для спама

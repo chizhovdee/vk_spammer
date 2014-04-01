@@ -9,6 +9,7 @@ var $;
 
 var Application = function(jQery){
   $ = jQery;
+  this.document_el  = $(window.document);
   this.app_el       = $("#application");
   this.sidebar_el   = $('#sidebar');
   this.container_el = $("#container");
@@ -41,11 +42,11 @@ _Class.prototype.show = function(){
 _Class.prototype.onStartClick = function (e){
   $(e.currentTarget).addClass('disabled');
 
-  spammer.start();
-
   global.started = true;
 
   this.show();
+
+  spammer.start();
 }
 
 _Class.prototype.primaryLog = function primaryLog(text){
@@ -65,6 +66,8 @@ _Class.prototype.secondaryLog = function(text){
   var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
   this.container_el.find('.secondary.log .text').append(time + " - " + text + "</br>");
+
+  this.document_el.scrollTop(this.document_el.height());
 }
 
 // рендеры
