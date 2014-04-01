@@ -11,6 +11,7 @@ var Application = function (){
   this.vkLoginResponse = this.vkLoginResponse.bind(this);
   this.vkLogOutResponse = this.vkLogOutResponse.bind(this);
   this.onResponseMembersOfGroup = this.onResponseMembersOfGroup.bind(this);
+  this.onSynchronizedDataWithDb = this.onSynchronizedDataWithDb.bind(this);
 
   this.app_el = $("#application");
   this.container = $("#container");
@@ -173,7 +174,7 @@ _class.prototype.synchronizeDataWithDb = function(){
           } else {
             self.primaryLog('Все участники группы обработаны.');
 
-            //emitter.emmit('synchronized_data_with_database');
+            emitter.emit('synchronized_data_with_database');
           }
         }
       );
@@ -184,6 +185,8 @@ _class.prototype.synchronizeDataWithDb = function(){
 }
 
 _class.prototype.onSynchronizedDataWithDb = function(){
+  var self = this;
+
   self.secondaryLog('Синхронизация с базой данных завершена.');
 
   self.secondaryLog('Предварительный выход из аккаунта.');
