@@ -25,6 +25,10 @@ global.started = false;
 
 global.current_user = {};
 
+global.current_group;
+
+global.added_users = 0;
+
 $(function(){
   $('title').text(gui.App.manifest.name + ' v-' + gui.App.manifest.version);
 

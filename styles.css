@@ -12,7 +12,7 @@ body {
   background: #FAFAFA;
   margin: 0px;
   padding: 0px;
-  color: #555555;
+  color: #000000;
 }
 
 ul {
@@ -48,6 +48,14 @@ ul {
 #sidebar .online {
   color: lime;
   font-weight: bold;
+}
+
+#sidebar .added_users {
+  padding-left: 10px;
+}
+
+#sidebar .captcha_count {
+  padding-left: 10px;
 }
 
 #container {

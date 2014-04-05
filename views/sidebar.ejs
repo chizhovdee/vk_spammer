@@ -13,13 +13,13 @@
   <% }) %>
 </ul>
 
-<div class="success_added">
+<div class="added_users">
   <br />
-  Успешно добавлено - <strong><%= global.success_added %></strong>
+  Успешно добавлено - <strong><%= global.added_users %></strong>
 </div>
 
 
-<div class="captcha">
+<div class="captcha_count">
   <br />
-  captcha - <strong><%= current_user.captcha_amount %></strong>
+  captcha - <strong><%= global.current_user.captcha_count || 0 %></strong>
 </div>
