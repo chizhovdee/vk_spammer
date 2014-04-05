@@ -15,7 +15,8 @@ global.authorization_data = [
 
 // группы в Вконтакте из которых мы будем выбирать участников для спама
 global.groups = [
-  'easeofdisgust'
+  'easeofdisgust',
+  'suicidesilenceofficial'
 ];
 
 // эта основная группа с которой мы будем синхронизировать участников с базой данных
