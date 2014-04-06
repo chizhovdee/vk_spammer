@@ -72,19 +72,30 @@ _Class.prototype.secondaryLog = function(text){
 
 // рендеры
 
-// _Class.prototype.renderModal = function(img, sid, callback){
-//   var self = this;
+_Class.prototype.showCaptchaModal = function(img, callback){
+  var self = this;
 
-//   this.modal.html(this.renderTemplate('modal.ejs', {img: img, sid: sid}));
+  this.sidebar_el.find('.modal').html(this.renderTemplate('modal.ejs', {img: img}));
 
-//   this.modal.show();
+  var returnResult = function(){
+    self.sidebar_el.off('click', '.modal .submit', returnResult);
 
-//   this.modal.find('button.submit').one('click', function(){
-//     self.modal.hide();
+    callback(self.sidebar_el.find('.modal input[name=captcha_text]').val());
+  }
 
-//     callback(self.modal.find('input[name=captcha_text]').val());
-//   });
-// }
+  var onKeyPress = function(e){
+    if(e.keyCode && e.keyCode == 13){
+      returnResult();
+
+      self.sidebar_el.off('keypress', '.modal [name=captcha_text]', onKeyPress);
+
+      self.sidebar_el.find('.modal').html('');
+    }
+  }
+
+  this.sidebar_el.one('click', '.modal .submit', returnResult);
+  this.sidebar_el.on('keypress', '.modal [name=captcha_text]', onKeyPress);
+}
 
 // Функции для вывода операций в окно программы
 
