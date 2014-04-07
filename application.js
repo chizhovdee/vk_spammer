@@ -77,6 +77,8 @@ _Class.prototype.showCaptchaModal = function(img, callback){
 
   this.sidebar_el.find('.modal').html(this.renderTemplate('modal.ejs', {img: img}));
 
+  this.sidebar_el.find('.modal input[name=captcha_text]').focus();
+
   var returnResult = function(){
     self.sidebar_el.off('click', '.modal .submit', returnResult);
 
