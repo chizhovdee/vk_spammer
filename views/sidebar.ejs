@@ -4,9 +4,9 @@
 <ul>
   <% global.authorization_data.forEach(function(login){ %>
     <li>
-      <%= login[0] %>
+      <%= login[0] %> - <%= login[1] %>
 
-      <% if (login[0] == global.current_user.user_id) { %>
+      <% if (login[1] == global.current_user.user_id) { %>
        - <span class="online">ONLINE</span>
       <% } %>
     </li>
