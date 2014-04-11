@@ -8,7 +8,7 @@ global._ = require('underscore');
 // login, password
 global.authorization_data = [
   [1, '248980434', '79226315582', 'therapsida3'],
-  //[2, '249721704', '79226315535', 'therapsida44'], locked
+  //[2, '249721704', '79226315535', 'therapsida44'], locked 13.04.14 01:14.
   //[3,'249723094', '79226315549', 'therapsida55'], locked 11.04.14 10:45
   [4, '249950698', '79227124271', 'therapsida6'],
   [5, '249952224', '79227124259', 'therapsida7'],
