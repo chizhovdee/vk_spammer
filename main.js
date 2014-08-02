@@ -3,10 +3,7 @@ global._ = require('underscore');
 var gui = require('nw.gui');
 
 global.logins = [
-  //['chizhov_dima', 'chizhov.dee@gmail.com', 'chizhov777'],
-  ['218027326', '79068914818', 'therapsida1'],
-  ['248635139', '79226341411', 'therapsida2'],
-  ['248980434', '79226315582', 'therapsida3']
+  //['vk_id', 'login', 'password'],
 ];
 
 global.login_number = 0;
